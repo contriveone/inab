@@ -1,4 +1,5 @@
 When reading a file containing bytes using Python, you are often looking to read it like this b"\xd8\xa7\xd9\x84\xd8\xa8\xd9\x84\xd9\x8a\xd8\xba, 
+
 for example
 o = open("bytes.txt", "rb")
 y = x.read()
@@ -8,7 +9,7 @@ I recently built a library to solve this problem where it is enough to pass it a
 
 # decode arabic utf-8 
 from inab import arabic_de
-str_bytes = "\\\xd8\xa7\\xd9\\x84\\xd8\\xa8\\xd9\\x84\\xd9\\x8a\\xd8\\xba"
+str_bytes = "\\\xd8\xa7\\\xd9\\\x84\\\xd8\\\xa8\\\xd9\\\x84\\\xd9\\\x8a\\\xd8\\\xba"
 x = bytes(str_bytes, "utf-8")
 print(x)
 text = arabic_de(x)
@@ -16,6 +17,6 @@ print(text)
 
 # decode english utf-16
 from inab import eng_de
-str_bytes = "\\xff\\xfei\\x00n\\x00a\\x00b\\x00 \\x00l\\x00i\\x00b\\x00"
+str_bytes = "\\\xff\\\xfei\\\x00n\\\x00a\\\x00b\\\x00 \\\x00l\\\x00i\\\x00b\\\x00"
 text = eng_de(str_bytes)
 print(text)
