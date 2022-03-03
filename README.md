@@ -1,6 +1,7 @@
 When reading a file containing bytes using Python, you are often looking to read it like this b"\xd8\xa7\xd9\x84\xd8\xa8\xd9\x84\xd9\x8a\xd8\xba, 
 
 for example
+
 o = open("bytes.txt", "rb")
 y = x.read()
 In fact, the exit is like this b"\\\xd8\\\xa7\\\xd9\\\x84\\\xd8\\\xa8\\\xd9\\\x84\\\xd9\\\x8a\\\xd8\\\xba, and when you try to decode it, you will get this back \xd8\xa7\xd9\x84\xd8\xa8\xd9\x84\xd9\x8a\xd8\xba, but it is a literal type, and whenever you code it, it will give you two slashback, and when you decode it, it takes you back to \xd8\xa7\xd9\x84\xd8\xa8\xd9\x84\xd9\x8a\xd8\xba.
